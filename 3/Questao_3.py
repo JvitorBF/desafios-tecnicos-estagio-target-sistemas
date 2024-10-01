@@ -10,7 +10,7 @@ def calcularFaturamento(dados):
     maior_faturamento = max(faturamentos_validos)
     # Calculando a média de faturamento (sem contar dias com valor 0)
     media_mensal = sum(faturamentos_validos) / len(faturamentos_validos)
-    # 
+    # Conta o número de dias em que o faturamento é maior que a média mensal
     dias_acima_da_media =  sum(1 for item in faturamentos_validos if item > media_mensal)
     
     return menor_faturamento, maior_faturamento, dias_acima_da_media
